@@ -1,11 +1,9 @@
-# 🛍️ Inventory tracker template
+# Marketing Digital Platform
 
-A Streamlit app showing how to use `st.data_editor` to read and modify a database. Behind the scenes
-this uses a simple SQLite database, but you can easily replace it with whatever your favorite DB is.
+### About:
+Digital marketing platform for influencers that can significantly optimize campaigns, streamline processes, and drive better results.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://inventory-tracker-template.streamlit.app/)
-
-### How to run it on your own machine
+### Launch:
 
 1. Install the requirements
 
@@ -18,3 +16,6 @@ this uses a simple SQLite database, but you can easily replace it with whatever 
    ```
    $ streamlit run streamlit_app.py
    ```
+
+### License:
+MIT: [http://z4dev.mit-license.org](http://z4dev.mit-license.org)
