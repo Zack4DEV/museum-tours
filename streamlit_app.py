@@ -73,19 +73,19 @@ marketing_expert_component()
 # Streamlit component for embedding a digital marketing platform page
 def digital_marketing_platform():
     st.markdown(
-        '''
+        """
         <div class="{} {} {}">
             <div class="{} {} {}">
-                <h1 class="{} {} {}">Digital Marketing Platform</h1>'''
+                <h1 class="{} {} {}">Digital Marketing Platform</h1>"""
                 st.markdown('<p class="{} {}">Elevate Your Marketing Skills with Professional Insights</p>',unsafe_allow_html=True)
 
                 st.markdown('<a href="https://beacons.ai" class="{} {} {} {} {} {}">Get started</a>', unsafe_allow_html=True)
                 st.markdown('<a href="https://beacons.ai" class="{} {} {} {} {} {}">Learn more</a>', unsafe_allow_html=True)
 
                 st.markdown('<footer class="{} {} {}">©2024 All Rights Reserved</footer>', unsafe_allow_html=True)
-            '''</div>
+            """</div>
         </div>
-        '''.format(
+        """.format(
             TW_CONTAINER, TW_TEXT_CENTER, TW_TEXT_LG,
             TW_RELATIVE, TW_H_FULL, TW_OVERFLOW_Y_AUTO,
             TW_TEXT_XL, TW_TEXT_BLUE, TW_MY_4,
