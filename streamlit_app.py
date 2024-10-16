@@ -1,101 +1,50 @@
 import streamlit as st
 
-# Set the page configuration for the Streamlit app
-st.set_page_config(
-    page_title="Inventory Tracker"
-)
+# Shared Tailwind CSS classes
+BUTTON_CLASSES = "py-3 px-6 rounded-lg hover:bg-opacity-80 transition-colors"
+GRID_CLASSES = "grid grid-cols-1 md:grid-cols-2 gap-6 mb-8"
+TEXT_CENTER_CLASSES = "text-center"
+TEXT_CLASSES = "text-xl font-semibold mb-6"
 
-# HTML code for embedding a digital marketing platform page
-html_code = '''
-<html lang="en">
-<head>
-    <!-- CSS for styling animations and general layout -->
-    <style data-emotion="css-global">
-        @-webkit-keyframes mui-auto-fill { from { display: block; } }
-        @keyframes mui-auto-fill { from { display: block; } }
-        @-webkit-keyframes mui-auto-fill-cancel { from { display: block; } }
-        @keyframes mui-auto-fill-cancel { from { display: block; } }
-    </style>
-    <style data-emotion="css feqhe6">
-        .css-feqhe6 {
-            display: inline-flex;
-            flex-direction: column;
-            position: relative;
-            min-width: 0;
-            padding: 0;
-            margin: 0;
-            border: 0;
-            vertical-align: top;
-            width: 100%;
-        }
-    </style>
-    <style data-emotion="css 1bewqcb">
-        .css-1bewqcb {
-            font-family: 'Poppins', Helvetica, sans-serif;
-            font-weight: 400;
-            font-size: 1rem;
-            line-height: 1.4375em;
-            color: rgba(0, 0, 0, 0.87);
-            box-sizing: border-box;
-            position: relative;
-            cursor: text;
-            display: inline-flex;
-            align-items: center;
-            width: 100%;
-            border-radius: 8px;
-            background-color: #FFFFFF;
-        }
-        .css-1bewqcb:hover .MuiOutlinedInput-notchedOutline {
-            border-color: rgba(0, 0, 0, 0.87);
-        }
-        .css-1bewqcb.Mui-focused .MuiOutlinedInput-notchedOutline {
-            border-color: #1976d2;
-            border-width: 2px;
-        }
-    </style>
+def marketing_expert_component():
+    st.markdown('<div class="bg-background text-primary-foreground p-8 flex flex-col items-center justify-center">', unsafe_allow_html=True)
+    st.markdown('<h1 class="text-4xl font-bold mb-4">Become A Marketing Expert</h1>', unsafe_allow_html=True)
+    st.markdown('<p class="text-center mb-6 text-lg">Unlock Your Full Potential With Expert Guidance</p>', unsafe_allow_html=True)
 
-    <!-- Meta tags for SEO and responsiveness -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=contain, user-scalable=no">
+    st.markdown(f'<div class="{GRID_CLASSES}">', unsafe_allow_html=True)
+    st.markdown(f'<button class="bg-primary text-primary-foreground {BUTTON_CLASSES}">Get Started</button>', unsafe_allow_html=True)
+    st.markdown(f'<button class="bg-primary text-primary-foreground {BUTTON_CLASSES}">Learn More</button>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
-    <!-- External stylesheet -->
-    <link rel="stylesheet" href="https://beacons.ai/_next/static/css/cec9a5860a368e30.css" data-precedence="next">
+    st.markdown(f'<p class="{TEXT_CENTER_CLASSES} {TEXT_CLASSES}">Inspiring Creativity One Idea At A Time</p>', unsafe_allow_html=True)
+    st.markdown('<p class="text-center mb-6">Transforming Creators into Storytelling Masters</p>', unsafe_allow_html=True)
 
-    <!-- Page title and description -->
-    <title>Digital Marketing Platform</title>
-    <meta name="description" content="zack4dev's Website">
+    st.markdown(f'<div class="{GRID_CLASSES}">', unsafe_allow_html=True)
+    st.markdown(f'<button class="bg-secondary text-secondary-foreground {BUTTON_CLASSES}">Learn More</button>', unsafe_allow_html=True)
+    st.markdown(f'<button class="bg-secondary text-secondary-foreground {BUTTON_CLASSES}">Monthly Membership</button>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
-    <!-- Canonical and social meta tags -->
-    <link rel="canonical" href="https://digital-marketing.streamlit.app/">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Digital Marketing Platform">
-    <meta property="og:description" content="zack4dev's Website ,Digital marketing for influencers that can significantly optimize campaigns, streamline processes, and drive better results">
-    <meta property="og:url" content="https://digital-marketing.streamlit.app">
-    <meta property="og:site_name" content="Streamlit">
+    st.markdown('<p class="text-center mt-6">Let\'s Build Your Digital Marketing Empire Now</p>', unsafe_allow_html=True)
 
-    <!-- Twitter card metadata -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Digital Marketing Platform">
-    <meta name="twitter:description" content="zack4dev's Website ,Digital marketing for influencers that can significantly optimize campaigns, streamline processes, and drive better results">
-</head>
-<body>
-    <div id="root">
-        <div class="website-viewer relative h-full overflow-y-auto">
-            <!-- Main content of the platform -->
-            <h1>Digital Marketing Platform</h1>
-            <p>Elevate Your Marketing Skills with Professional Insights</p>
+    st.markdown(f'<div class="{GRID_CLASSES}">', unsafe_allow_html=True)
+    st.markdown(f'<button class="bg-accent text-accent-foreground {BUTTON_CLASSES}">Join Now</button>', unsafe_allow_html=True)
+    st.markdown(f'<button class="bg-accent text-accent-foreground {BUTTON_CLASSES}">Learn More</button>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
-            <!-- Links to actions -->
-            <a href="https://digital-marketing.streamlit.app/">Get started</a>
-            <a href="https://digital-marketing.streamlit.app/">Learn more</a>
+    st.markdown('<p class="text-center mt-6">Check Out Our Contents</p>', unsafe_allow_html=True)
+    st.markdown('<p class="text-center mb-6">Learn From The Experts</p>', unsafe_allow_html=True)
 
-            <!-- Footer section -->
-            <footer>©2024 All Rights Reserved</footer>
-        </div>
-    </div>
-</body>
-</html>
-'''
+    st.markdown(f'<button class="bg-accent text-accent-foreground {BUTTON_CLASSES} mb-6">Stay In The Loop</button>', unsafe_allow_html=True)
 
-# Display the HTML content in the Streamlit app
-st.markdown(html_code, unsafe_allow_html=True)
+    st.markdown('<form class="flex flex-col items-center mt-6">', unsafe_allow_html=True)
+    st.markdown('<input type="email" placeholder="Enter your email" class="bg-input text-input placeholder-input p-2 rounded-md border border-border focus:outline-none focus:ring ring-ring transition-colors mb-2 w-full max-w-xs" />', unsafe_allow_html=True)
+    st.markdown('<button type="submit" class="bg-primary text-primary-foreground py-2 px-4 rounded-md hover:bg-primary/80 transition-colors">Submit</button>', unsafe_allow_html=True)
+    st.markdown('</form>', unsafe_allow_html=True)
+
+    st.markdown('<p class="text-center mt-6 text-muted-foreground">All rights reserved</p>', unsafe_allow_html=True)
+    st.markdown('<p class="text-center text-muted-foreground">Powered by</p>', unsafe_allow_html=True)
+
+    st.markdown('</div>', unsafe_allow_html=True)
+
+# Display the marketing expert component
+marketing_expert_component()
