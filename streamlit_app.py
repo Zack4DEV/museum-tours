@@ -76,14 +76,14 @@ def digital_marketing_platform():
         '''
         <div class="{} {} {}">
             <div class="{} {} {}">
-                <h1 class="{} {} {}">Digital Marketing Platform</h1>
-                <p class="{} {}">Elevate Your Marketing Skills with Professional Insights</p>
+                <h1 class="{} {} {}">Digital Marketing Platform</h1>'''
+                st.markdown('<p class="{} {}">Elevate Your Marketing Skills with Professional Insights</p>',unsafe_allow_html=True)
 
-                <a href="https://beacons.ai" class="{} {} {} {} {} {}">Get started</a>
-                <a href="https://beacons.ai" class="{} {} {} {} {} {}">Learn more</a>
+                st.markdown('<a href="https://beacons.ai" class="{} {} {} {} {} {}">Get started</a>', unsafe_allow_html=True)
+                st.markdown('<a href="https://beacons.ai" class="{} {} {} {} {} {}">Learn more</a>', unsafe_allow_html=True)
 
-                <footer class="{} {} {}">©2024 All Rights Reserved</footer>
-            </div>
+                st.markdown('<footer class="{} {} {}">©2024 All Rights Reserved</footer>', unsafe_allow_html=True)
+            '''</div>
         </div>
         '''.format(
             TW_CONTAINER, TW_TEXT_CENTER, TW_TEXT_LG,
