@@ -1,4 +1,15 @@
 {
     "IDX.aI.enableInlineCompletion": true,
-    "IDX.aI.enableCodebaseIndexing": true
-}
+    "IDX.aI.enableCodebaseIndexing": true,
+    "explorer.confirmDragAndDrop": false,
+    "files.exclude": {
+      "**/.coverage.*": true,
+      "**/__init__*": true,
+      "**/__pycache__*": true
+    },
+    "searchOpenAllResults.delay": 150,
+    "searchOpenAllResults.fileResultsLimit": 300,
+    "searchOpenAllResults.resultsLimit": 250,
+    "window.zoomLevel": 0
+  }
+  
