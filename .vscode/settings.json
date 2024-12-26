@@ -10,6 +10,9 @@
     "searchOpenAllResults.delay": 150,
     "searchOpenAllResults.fileResultsLimit": 300,
     "searchOpenAllResults.resultsLimit": 250,
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "files.readonlyExclude": {
+      "/nix/store/mh6gqjf1w1i6ln1a61psnz0gzdmwrspl-python3-3.11.8/lib/python3.11": true
+    }
   }
   

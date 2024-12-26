@@ -8,11 +8,14 @@
   home.packages = with pkgs; [
     # pkgs.go
     pkgs.sudo
-    pkgs.python311Packages.pip
+    pkgs.python313Full
+    pkgs.python313Packages.pip
+    pkgs.pipenv
     pkgs.nodejs_20
     pkgs.nodePackages.nodemon
     pkgs.gh
-    pkgs.python313
+    pkgs.git
+    pkgs.curl
   ];
 
   # Sets environment variables in the workspace
@@ -24,19 +27,18 @@
     ];
 
     # Enable previews
-    previews = {
+
+      previews = {
       enable = true;
       previews = {
-        # web = {
-        #   # Example: run "npm run dev" with PORT set to IDX's defined port for previews,
-        #   # and show it in IDX's web preview panel
-        #   command = ["npm" "run" "dev"];
-        #   manager = "web";
-        #   env = {
-        #     # Environment variables to set for your server
-        #     PORT = "$PORT";
-        #   };
-        # };
+        # Example: Run a web server for previewing web projects
+        web = {
+  command = ["python" "app.py" ];  # Example command to run for previews
+          manager = "web";
+          env = {
+            PORT = "$PORT";  # Define environment variables for the preview
+          };
+        };
       };
     };
 
@@ -44,13 +46,13 @@
     workspace = {
       # Runs when a workspace is first created
       onCreate = {
-        # Example: install JS dependencies from NPM
-        # npm-install = "npm install";
+          # Example: install pip modules
+        # pip-install = "pip install -r requirements.txt";
       };
       # Runs when the workspace is (re)started
       onStart = {
-        # Example: start a background task to watch and re-build backend code
-        # watch-backend = "npm run watch-backend";
+          # Example: start a background task to watch and rebuild  code
+        # serve-streamlit = "python app.py";
       };
     };
   };
