@@ -6,10 +6,11 @@
 
   # Use https://search.nixos.org/packages to find packages
   home.packages = with pkgs; [
-    # pkgs.go
     pkgs.sudo
-    pkgs.python313Full
-    pkgs.python313Packages.pip
+    pkgs.python3
+    pkgs.python311Packages.pip
+  #  pkgs.python311Packages.fastapi
+  #  pkgs.python311Packages.uvicorn
     pkgs.pipenv
     pkgs.nodejs_20
     pkgs.nodePackages.nodemon
@@ -20,40 +21,21 @@
 
   # Sets environment variables in the workspace
   env = {};
-  idx = {
+   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
-    extensions = [
-      # "vscodevim.vim"
-    ];
-
-    # Enable previews
-
-      previews = {
-      enable = true;
-      previews = {
-        # Example: Run a web server for previewing web projects
-        web = {
-  command = ["python" "app.py" ];  # Example command to run for previews
-          manager = "web";
-          env = {
-            PORT = "$PORT";  # Define environment variables for the preview
-          };
-        };
-      };
-    };
-
-    # Workspace lifecycle hooks
+    extensions = [ "ms-python.python" "rangav.vscode-thunder-client" ];
     workspace = {
-      # Runs when a workspace is first created
+      # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
-          # Example: install pip modules
-        # pip-install = "pip install -r requirements.txt";
+        create-venv = ''
+          python -m venv $HOME/.venv/
+          source $HOME/.venv//bin/activate
+          pip install -r requirements.txt
+        '';
+        # Open editors for the following files by default, if they exist:
+        default.openFiles = [ "app.py" ];
       };
-      # Runs when the workspace is (re)started
-      onStart = {
-          # Example: start a background task to watch and rebuild  code
-        # serve-streamlit = "python app.py";
-      };
+      # To run something each time the workspace is (re)started, use the `onStart` hook
     };
   };
 }
