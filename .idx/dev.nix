@@ -41,7 +41,6 @@
       };
 
     # Workspace lifecycle hooks
-   /**
     workspace = {
        onCreate = {
         create-venv = ''
@@ -55,6 +54,5 @@
          watch-backend = "npm run start --web";
       };
     };
-  */
   };
 }
